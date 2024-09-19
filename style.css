@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    user-select: none;
+}
+
+footer {
+    background-color: rgb(118, 118, 118);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    flex: 1;
+    background-color: rgb(240, 240, 240);
+    padding: 20px;
+    overflow-y: auto;
+}
+#TelegramChannel {
+    user-select: none;
+}
+#TelegramChannel:hover {
+    color: rgb(41,161,221);
+}
+#Boosty {
+    user-select: none;
+}
+#Boosty:hover {
+    color: rgb(224,104,61);
+}
+
+#MainM {
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 30px;
+    max-width: 500px;
+    background-color: rgb(255, 255, 255);
+}
+.BigButton {
+    user-select: none;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 30px;
+    max-width: 500px;
+    background-color: rgb(255, 255, 255);
+    width: 500px; height: 70px; display: flex; justify-content: center; align-items: center;
+}
+.BigButton:hover {
+    color: white;
+    background-color: rgb(244, 76, 110);
+}
+
+.container {
+    display:flex;
+    max-width: 500px;
+    flex-wrap:wrap;
+    margin:auto;
+}
+.box{
+    width:100%;
+    max-width:30%;
+    border:1px solid red;
+    margin:5px;
+}
+#popUp {
+    display: none;
+    z-index: 100;
+    width: 200px;
+    height: 50px;
+    background: #ADD;
+  }
+#UpButt {
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 24px;
+    max-width: 100px;
+    background-color: rgb(255, 255, 255);
+
+    border: none;
+
+    padding: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#UpButt:hover {
+    color: white;
+    background-color: rgb(244, 76, 110);
+}
+.BuyButt {
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 24px;
+    max-width: 100px;
+    background-color: rgb(255, 255, 255);
+
+    border: none;
+
+    padding: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.BuyButt:hover {
+    color: white;
+    background-color: rgb(244, 76, 110);
+}
+
+#modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 99998;
+    background-color: rgba(0, 0, 0,.3);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    overflow-y: auto;
+    visibility: hidden;
+}
+#modal.hidden {
+    visibility: visible;
+}
+#modal_Shop {
+    margin-top: 10px;
+
+    padding: 10px;
+    z-index: 1;
+    background-color: white;
+    border-radius: 30px;
+}
+#products {
+    font-size: 20px;
+}
+#productsDis {
+    font-size: 20px;
+}
+.product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.product-image {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 50%;
+}
+
+.product-header {
+    display: flex;
+    align-items: center;
+}
+
+.product-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.product-quantity {
+    font-size: 18px;
+    color: #777;
+}
+
+.product-price {
+    text-align: left;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.product-description {
+    font-size: 14px;
+    color: #999;
+    margin-top: 5px;
+}
+
+.buy-button img {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+
+#overlayImage {
+    position: absolute; /* Используем absolute для точного позиционирования */
+    width: 100px; /* Размер PNG */
+    height: 100px;
+    display: none; /* Скрыто по умолчанию */
+    pointer-events: none; /* Изображение не будет перехватывать клики */
+    z-index: 10000; /* Убедитесь, что изображение находится поверх других элементов */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.timer__items {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+  }
+  .timer__item {
+    position: relative;
+    min-width: 60px;
+    margin-left: 1px;
+    margin-right: 2px;
+    padding-bottom: 15px;
+    text-align: center;
+  }
+  .timer__item::before {
+    content: attr(data-title);
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    font-size: 14px;
+  }
+  .timer__item:not(:last-child)::after {
+    content: ':';
+    position: absolute;
+    right: -6px;
+  }

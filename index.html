@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>BoyKisser Clicker</title>
+</head>
+<body>
+    <header>
+Boy<span style="color: rgb(249,17,65);">Kisser</span> <span style="color: rgb(123,123,123);">Clicker </span><span style="font-size: 15px; color: rgb(123,123,123);">0.2</span>
+    </header>
+    <main style="text-align: center;">
+
+
+<div id="MainM" class="container">
+    <span id="KissS" style="width: 500px; margin-top: 15px;">Поцелуев: </span>
+    <span id="SUM" style="width: 500px;">0</span><span></span>
+    <span style="width: 500px; margin-top: 10px; font-size: 15px; display: flex; justify-content: space-between; color: rgb(163, 163, 163);">
+        <span style="margin-left: auto; margin-right: 10px;">Поцелуев за тык: </span><div id="KissPerClickStats">0</div><span style="margin-left: 10px;"> | Поцелуев в секунду: </span><div style="margin-right: auto; margin-left: 10px;" id="KissPerSecondStats">0</div>
+    </span>
+    <img src="sprite/TV off.png" alt="" style="height: 250px; margin-left: auto; margin-right: 10px; margin-top: 5px;" id="TV">
+    <img id="BoyFace" src="sprite/NOTKISS.png" alt="" style="max-width: 300px; margin-left: auto; margin-right: auto;  position: relative; ">
+    <img id="overlayImage" src="sprite/KISS_LIP.png" alt="Overlay Image" style="max-width: 350px; margin-left: auto; margin-right: auto;">
+</div> <br>
+<div id="MainM" class="container">
+    <span id="openBth" class="BigButton">Магазин любви </span>
+
+</div> <br>
+
+
+            <div id="modal">
+                <div id="modal_Shop">
+                    <h1><span style="text-align: center;">Магазин</span></h1>
+                    
+                    <div>
+                        <div class="product">
+                            <img src="sprite/product/0/0.0.png" alt="Лапки" class="product-image">
+                            <div class="product-info">
+                                <div class="product-header">
+                                    <span class="product-title">Лапки</span>
+                                    <span id="Product1QuantitySum">0</span>
+                                </div>
+                                <div class="product-price">Цена: <span id="Product1PriceSumm">100</span></div>
+                                <div class="product-description">Вы тыкаете эффективнее +1 поцелуй за тык</div>
+                            </div>
+                            <button class="BuyButt" style="margin-left: 12px;" id="UpButt1">Купить</button>
+                        </div>
+                    
+                        <div class="product">
+                            <img src="sprite/product/1/1.0.png" alt="Помада" class="product-image">
+                            <div class="product-info">
+                                <div class="product-header">
+                                    <span class="product-title">Помада</span>
+                                    <span id="Product2QuantitySum">0</span>
+                                </div>
+                                <div class="product-price">Цена: <span id="Product2PriceSumm">15</span></div>
+                                <div class="product-description">Вы целуете без помощи рук! +0.1 в секунду</div>
+                            </div>
+                            <button class="BuyButt" style="margin-left: 12px;" id="UpButt2">Купить</button>
+                        </div>
+                    
+                        <div class="product">
+                            <img src="sprite/product/2/2.0.png" alt="Сладости" class="product-image">
+                            <div class="product-info">
+                                <div class="product-header">
+                                    <span class="product-title">Сладости</span>
+                                    <span id="Product3QuantitySum">0</span>
+                                </div>
+                                <div class="product-price">Цена: <span id="Product3PriceSumm">350</span></div>
+                                <div class="product-description">Вы приманиваете больше мальчиков +0.5 в секунду</div>
+                            </div>
+                            <button class="BuyButt" style="margin-left: 12px;" id="UpButt3">Купить</button>
+                        </div>
+                    
+                        <div class="product">
+                            <img src="sprite/product/3/3.0.png" alt="Романтическая музыка" class="product-image">
+                            <div class="product-info">
+                                <div class="product-header">
+                                    <span class="product-title">Романтическая музыка</span>
+                                    <span id="Product4QuantitySum">0</span>
+                                </div>
+                                <div class="product-price">Цена: <span id="Product4PriceSumm">500</span></div>
+                                <div class="product-description">Музыка приносит больше поцелуев +4 в секунду</div>
+                            </div>
+                            <button class="BuyButt" style="margin-left: 12px;" id="UpButt4">Купить</button>
+                        </div>
+                    
+                        <div class="product">
+                            <img src="sprite/product/4/4.0.png" alt="Шлюшевые игрушки" class="product-image">
+                            <div class="product-info">
+                                <div class="product-header">
+                                    <span class="product-title">Шлюшевые игрушки</span>
+                                    <span id="Product5QuantitySum">0</span>
+                                </div>
+                                <div class="product-price">Цена: <span id="Product5PriceSumm">3 000</span></div>
+                                <div class="product-description">Игрушки приносят еще больше +10 в секунду</div>
+                            </div>
+                            <button class="BuyButt" style="margin-left: 12px;" id="UpButt5">Купить</button>
+                        </div>
+                    
+                        <div class="product">
+                            <img src="sprite/product/5/5.0.png" alt="Любовные письма" class="product-image">
+                            <div class="product-info">
+                                <div class="product-header">
+                                    <span class="product-title">Любовные письма</span>
+                                    <span id="Product6QuantitySum">0</span>
+                                </div>
+                                <div class="product-price">Цена: <span id="Product6PriceSumm">8 000</span></div>
+                                <div class="product-description">Привлекают гораздо больше +40 в секунду</div>
+                            </div>
+                            <button class="BuyButt" style="margin-left: 12px;" id="UpButt6">Купить</button>
+                        </div>
+                    
+                        <div class="product">
+                            <img src="sprite/product/6/6.0.png" alt="Розовые очки" class="product-image">
+                            <div class="product-info">
+                                <div class="product-header">
+                                    <span class="product-title">Розовые очки</span>
+                                    <span id="Product7QuantitySum">0</span>
+                                </div>
+                                <div class="product-price">Цена: <span id="Product7PriceSumm">30 000</span></div>
+                                <div class="product-description">Другой взгляд приносит еще больше +100 в секунду</div>
+                            </div>
+                            <button class="BuyButt" style="margin-left: 12px;" id="UpButt7">Купить</button>
+                        </div>
+                    
+                        <div class="product">
+                            <img src="sprite/product/7/7.0.png" alt="Автомат для поцелуев" class="product-image">
+                            <div class="product-info">
+                                <div class="product-header">
+                                    <span class="product-title">Автомат для поцелуев</span>
+                                    <span id="Product8QuantitySum">0</span>
+                                </div>
+                                <div class="product-price">Цена: <span id="Product8PriceSumm">160 000</span></div>
+                                <div class="product-description">Раздает поцелуи в общественных местах +400 в секунду</div>
+                            </div>
+                            <button class="BuyButt" style="margin-left: 12px;" id="UpButt8">Купить</button>
+                        </div>
+                    
+                        <div class="product">
+                            <img src="sprite/product/8/8.0.png" alt="Целовательная вечеринка" class="product-image">
+                            <div class="product-info">
+                                <div class="product-header">
+                                    <span class="product-title">Целовательная вечеринка</span>
+                                    <span id="Product9QuantitySum">0</span>
+                                </div>
+                                <div class="product-price">Цена: <span id="Product9PriceSumm">1 100 000</span></div>
+                                <div class="product-description">Вечеринки привлекают больше мальчиков +6666 в секунду</div>
+                            </div>
+                            <button class="BuyButt" style="margin-left: 12px;" id="UpButt9">Купить</button>
+                        </div>
+                    
+                        <div class="product">
+                            <img src="sprite/product/9/9.0.png" alt="Машина с поцелуями" class="product-image">
+                            <div class="product-info">
+                                <div class="product-header">
+                                    <span class="product-title">Машина с поцелуями</span>
+                                    <span id="Product10QuantitySum">0</span>
+                                </div>
+                                <div class="product-price">Цена: <span id="Product10PriceSumm">63 456 789</span></div>
+                                <div class="product-description">Машина раздает поцелуи +98 765 в секунду</div>
+                            </div>
+                            <button class="BuyButt" style="margin-left: 12px;" id="UpButt10">Купить</button>
+                        </div>
+                    
+                        <div class="product">
+                            <img src="sprite/product/10/10.0.png" alt="Завод поцелуев" class="product-image">
+                            <div class="product-info">
+                                <div class="product-header">
+                                    <span class="product-title">Завод поцелуев</span>
+                                    <span id="Product11QuantitySum">0</span>
+                                </div>
+                                <div class="product-price">Цена: <span id="Product11PriceSumm">1 400 999 999</span></div>
+                                <div class="product-description">Завод поцелуев раздает поцелуи +999 999 в секунду</div>
+                            </div>
+                            <button class="BuyButt" style="margin-left: 12px;" id="UpButt11">Купить</button>
+                        </div>
+                    
+                        <div class="product">
+                            <img src="sprite/product/11/11.0.png" alt="Дрон целователь" class="product-image">
+                            <div class="product-info">
+                                <div class="product-header">
+                                    <span class="product-title">Дрон целователь</span>
+                                    <span id="Product12QuantitySum">0</span>
+                                </div>
+                                <div class="product-price">Цена: <span id="Product12PriceSumm">4 950 000 000</span></div>
+                                <div class="product-description">Дроны автоматически находят мальчиков +9 999 999 в секунду</div>
+                            </div>
+                            <button class="BuyButt" style="margin-left: 12px;" id="UpButt12">Купить</button>
+                        </div>
+                    
+                        <div class="product">
+                            <img src="sprite/product/12/12.0.png" alt="Компьютерный вирус" class="product-image">
+                            <div class="product-info">
+                                <div class="product-header">
+                                    <span class="product-title">Компьютерный вирус</span>
+                                    <span id="Product13QuantitySum">0</span>
+                                </div>
+                                <div class="product-price">Цена: <span id="Product13PriceSumm">22 000 000 000</span></div>
+                                <div class="product-description">Вирус разносит поцелуи с максимальной эффективностью</div>
+                            </div>
+                            <button class="BuyButt" style="margin-left: 12px;" id="UpButt13">Купить</button>
+                        </div>
+                    </div>
+                    
+
+                    <div id="MainM" class="container" style="margin-top: 15px;">
+                        <span id="closeBtn" class="BigButton">Закрыть магазин</span>
+                    
+                    </div>
+                </div>
+            </div>
+
+    </main>
+    <footer style="text-align: center;">
+<span id="TelegramChannel">Telegram Channel</span> | <span id="Boosty">Boosty</span> | 2024
+    </footer>
+</body>
+    <script src="Probucts.js"></script>
+    <script src="ProbuctsMath.js"></script>
+    <script src="script.js"></script>
+</html>
